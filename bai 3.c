@@ -1,31 +1,22 @@
 #include<stdio.h>
 
 int main(){
-	int thang;
-	printf("Nhap thang (1-12): ");
-	scanf("%d", &thang);
-	switch(thang){
-		case 1:
-		case 3:
-		case 5:
-		case 7:
-		case 8:
-		case 10:
-		case 12:
-		printf("Thang %d co 31 ngay.\n");
-		break;
-		case 4:
-		case 6:
-		case 9:
-		case 11:
-			printf("Thang %d co 30 ngay.\n");
-			break;
-		case 2:
-			printf("Thang %d co 28 hoac 29 ngay.\n");
-		default:
-			printf("Loi, thang khong hop le.\n");
-	          
+	int n;
+	printf("Nhap vao mot so nguyen: ");
+	scanf("%d", &n);
+	if(n % 3 == 0 && n % 5 ==0){
+		printf("So vua nhap chia het cho ca 3 va 5.");
 	}
+	else if(n % 3 == 0){
+		printf("So vua nhap chia het cho 3.\n");
+	}
+	else if(n % 5 ==0){
+		printf("So vua nhap chia het cho 5.\n");
+	}
+	else{
+		printf("So vua nhap la so 0.\n");
+	}
+
 	
 	return 0;
 }
